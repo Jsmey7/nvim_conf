@@ -32,19 +32,84 @@ require("lazy").setup({
 
       },
       {
+          "lewis6991/gitsigns.nvim",
+          config = function()
+            -- NOTE: you do not need to call setup if you don't want to.
+            require("gitsigns").setup({
+              -- optional configuration here
+            })
+          end,
+      },
+      {
+          "Mofiqul/vscode.nvim",
+          config = function()
+            -- NOTE: you do not need to call setup if you don't want to.
+            require("vscode").setup({
+              -- optional configuration here
+            })
+          end,
+      },
+      {
+          "xero/miasma.nvim",
+          config = function()
+          end,
+      },
+      {
+          "miikanissi/modus-themes.nvim",
+          config = function()
+            -- NOTE: you do not need to call setup if you don't want to.
+            require("modus-themes").setup({
+              -- optional configuration here
+            })
+          end,
+      },
+      {
           "vague2k/vague.nvim",
           config = function()
             -- NOTE: you do not need to call setup if you don't want to.
             require("vague").setup({
               -- optional configuration here
             })
-          end
+          end,
+      },
+      {
+          'sainnhe/everforest',
+          lazy = false,
+          priority = 1000,
+          config = function()
+            vim.g.everforest_enable_italic = true
+          end,
       },
       {
         "catppuccin/nvim", 
         name = "catppuccin",
         config = function()
         end,
+      },
+      {
+          "Koalhack/darcubox-nvim",
+          config = function()  
+          end,
+      },
+      {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
+      },
+      {
+        'akinsho/bufferline.nvim', 
+        version = "*", 
+        dependencies = 'nvim-tree/nvim-web-devicons'
+      },
+      {
+          "folke/zen-mode.nvim",
+          opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+          }
       },
       {
         "rebelot/kanagawa.nvim", 
@@ -155,6 +220,7 @@ require("lazy").setup({
 
 
 vim.g.have_nerd_font = true
+vim.keymap.set('n', '<leader>z', '<cmd>ZenMode<CR>', {desc = 'Toggle zen mode', silent = true})
 
 -- settings
 vim.o.number = true
@@ -225,7 +291,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 vim.keymap.set('n', '<leader>th', function()
     require('telescope.builtin').colorscheme()
 end, {desc = "Switch color scheme"})
-
 
 
 
