@@ -25,7 +25,7 @@ vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", opts('move selected area up'))
 vim.keymap.set('x', '>', '>gv', opts('Indent and reselect'))
 vim.keymap.set('x', '<', '<gv', opts('Indent and reselect'))
 -- visual mode
-vim.keymap.set("n", "x", "V", opts('select line in visual mode'))
+vim.keymap.set("n", "x", "v", opts('select line in visual mode'))
 vim.keymap.set('x', 'v', '<C-c>', opts('exit visual mode to normal mode'))
 vim.keymap.set('x', 'x', '<C-c>', opts('exit visual mode to normal mode'))
 
