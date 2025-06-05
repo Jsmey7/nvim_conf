@@ -5,6 +5,7 @@ local opts = function(desc)
 end
 
 vim.api.nvim_set_hl(0, "WinSeparator", { link = "Normal", bold = true })
+vim.keymap.set("n", "<C-w>o", ":SimpleZoomToggle<CR>", opts("zoom into window while preserving the layout"))
 
 --terminal
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm size=14 direction=horizontal <CR>", opts("open terminal from bottum"))
@@ -22,8 +23,9 @@ vim.keymap.set("t", "<C-k>", "exit<CR>", opts("kill terminal"))
 -- vim.keymap.set("n", "<leader>ta", "<C-w>j<CR>a")
 
 -- buffers
-vim.keymap.set("n", "bn", ":bnext<CR>", opts("next buffer"))
-vim.keymap.set("n", "bp", ":bprevious<CR>", opts("previous buffer"))
+vim.keymap.set("n", "gn", ":bnext<CR>", opts("next buffer"))
+vim.keymap.set("n", "gp", ":bprevious<CR>", opts("previous buffer"))
+vim.keymap.set("n", "bc", ":bdelete<CR>", opts("delete buffer"))
 
 --oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
@@ -31,7 +33,7 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "gl", "$", opts("goto start of line"))
 vim.keymap.set("n", "gh", "^", opts("goto end of line"))
 vim.keymap.set("n", "ge", "G", opts("goto end of file"))
-vim.keymap.set("n", "gb", "0", opts("goto start of line before indentation"))
+vim.keymap.set("n", "gy", "0", opts("goto start of line before indentation"))
 vim.keymap.set("n", "gj", "}", opts("go to next peragraph"))
 vim.keymap.set("n", "gk", "{", opts("go to previous peragraph"))
 vim.keymap.set("n", "miw", "viw", opts("select inner word (like helix)"))
@@ -49,6 +51,15 @@ vim.keymap.set("x", "<", "<gv", opts("Indent and reselect"))
 vim.keymap.set("n", "x", "V", opts("select line in visual mode"))
 vim.keymap.set("x", "v", "<C-c>", opts("exit visual mode to normal mode"))
 vim.keymap.set("x", "x", "<C-c>", opts("exit visual mode to normal mode"))
+vim.keymap.set("v", "a", "<C-c>a", opts("exit visual mode to insert mode"))
+vim.keymap.set("v", "i", "<C-c>i", opts("exit visual mode to insert mode"))
+vim.keymap.set("v", "o", "<C-c>o", opts("exit visual mode to insert mode"))
+
+--goto visual mode
+vim.keymap.set("v", "gl", "$", opts("goto start of line"))
+vim.keymap.set("v", "gh", "^", opts("goto end of line"))
+vim.keymap.set("v", "ge", "G", opts("goto end of file"))
+vim.keymap.set("v", "gy", "0", opts("goto start of line before indentation"))
 
 -- window managment
 vim.keymap.set("n", "<C-w>h", "<cmd>wincmd h<cr>", opts("goto left window"))
@@ -68,5 +79,17 @@ vim.keymap.set("n", "<leader>w=", "<C-w>=", { desc = "Balance window sizes" })
 vim.keymap.set("n", "<leader>th", function()
 	require("telescope.builtin").colorscheme()
 end, opts("Switch color scheme"))
+
+-- debugging
+vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", opts("toggle breakpoint"))
+vim.keymap.set("n", "<leader>dt", ":DapVirtualTextToggle<CR>", opts("toggle debugging veirtual text"))
+vim.keymap.set("n", "<leader>dcb", ":DapClearBreakpoints<CR>", opts("clear break points"))
+vim.keymap.set("n", "<leader>dui", ":lua require('dapui').toggle()<CR>", opts("toggle nvim dap ui"))
+vim.keymap.set("n", "<leader>dur", ":lua require('dapui').open({reset = true})<CR>", opts("restart dapui"))
+vim.keymap.set("n", "<F1>", ":DapContinue<CR>", opts("continue (debugging)"))
+vim.keymap.set("n", "<F2>", ":DapStepOver<CR>", opts("step over (debugging)"))
+vim.keymap.set("n", "<F3>", ":DapStepOut<CR>", opts("step out (debugging)"))
+vim.keymap.set("n", "<F4>", ":DapStepInto<CR>", opts("step into (debugging)"))
+vim.keymap.set("n", "<F13>", ":DapRestartFrame<CR>", opts("restart frame (debugging)"))
 
 return M
