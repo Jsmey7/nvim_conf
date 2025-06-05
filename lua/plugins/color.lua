@@ -60,7 +60,6 @@ return {
       {
           'sainnhe/everforest',
           lazy = false,
-          priority = 1000,
           config = function()
             vim.g.everforest_enable_italic = true
           end,
@@ -105,6 +104,7 @@ return {
       priority = 1000,
       config = function()
         vim.g.gruvbox_material_enable_italic = true
+        vim.g.gruvbox_material_background = "soft"
         vim.cmd.colorscheme('gruvbox-material')
       end,
     },
@@ -115,9 +115,12 @@ return {
       end,
     },
     {
-      'RRethy/base16-nvim',
+      'metalelf0/black-metal-theme-neovim',
       lazy = false,
       config = function()
+        require("black-metal").setup({
+      -- optional configuration here
+        })
       end,
     }
 }

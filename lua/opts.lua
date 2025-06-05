@@ -1,6 +1,8 @@
 local M = {}
 
 vim.g.have_nerd_font = true
+vim.opt.termguicolors = true
+vim.opt.colorcolumn = "120"
 
 -- settings
 vim.o.number = true
