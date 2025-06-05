@@ -3,8 +3,6 @@ local M = {}
 local opts = function(desc)
 	return { noremap = true, silent = true, desc = desc }
 end
--- zen mode
-vim.keymap.set("n", "<leader>z", "<cmd>zenmode<cr>", opts("toggle zen mode"))
 
 vim.api.nvim_set_hl(0, "WinSeparator", { link = "Normal", bold = true })
 

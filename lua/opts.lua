@@ -1,7 +1,7 @@
 local M = {}
 
+vim.o.termguicolors = true
 vim.g.have_nerd_font = true
-vim.opt.termguicolors = true
 vim.opt.colorcolumn = "120"
 
 -- settings
@@ -10,12 +10,12 @@ vim.o.relativenumber = true
 vim.o.mouse = "" --mouse disabled
 vim.o.cursorline = true
 vim.o.showmode = false --show the current used mode
-vim.o.fillchars = 'eob: '
+vim.o.fillchars = "eob: "
 vim.o.scrolloff = 11
 
 --sync to the OS clipboard
 vim.schedule(function()
-	vim.o.clipboard = 'unnamedplus'
+	vim.o.clipboard = "unnamedplus"
 end)
 
 -- undo even after save
@@ -33,7 +33,7 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.list = true
 
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 
 vim.o.confirm = true
 

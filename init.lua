@@ -1,8 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
--- plugins
--- lazy.nvim
+vim.o.termguicolors = true
+vim.g.ai_cmp = true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
