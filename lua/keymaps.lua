@@ -6,6 +6,27 @@ end
 
 vim.api.nvim_set_hl(0, "WinSeparator", { link = "Normal", bold = true })
 
+--terminal
+vim.keymap.set("n", "<leader>tt", ":ToggleTerm size=14 direction=horizontal <CR>", opts("open terminal from bottum"))
+vim.keymap.set(
+	"n",
+	"<leader>tr",
+	":ToggleTerm size=50 direction=vertical <CR>",
+	opts("open terminal from right side vertical")
+)
+vim.keymap.set("n", "<leader>tf", ":ToggleTerm size=14 direction=float <CR>", opts("open floating terminal"))
+vim.keymap.set("t", "<C-k>", "exit<CR>", opts("kill terminal"))
+
+-- vim.keymap.set("t", "<leader>tc", "<C-\\><C-n>:ToggleTerm<CR>", opts("close terminal (detach)"))
+-- vim.keymap.set("t", "<leader>td", "<C-\\><C-n><C-w>k")
+-- vim.keymap.set("n", "<leader>ta", "<C-w>j<CR>a")
+
+-- buffers
+vim.keymap.set("n", "bn", ":bnext<CR>", opts("next buffer"))
+vim.keymap.set("n", "bp", ":bprevious<CR>", opts("previous buffer"))
+
+--oil
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- goto
 vim.keymap.set("n", "gl", "$", opts("goto start of line"))
 vim.keymap.set("n", "gh", "^", opts("goto end of line"))

@@ -1,3 +1,4 @@
+vim.loader.enable()
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.o.termguicolors = true
@@ -32,3 +33,9 @@ require("lazy").setup({
 require("opts")
 require("keymaps")
 require("telescope_conf")
+
+vim.diagnostic.config({
+	update_in_insert = true,
+	signs = true,
+	severity_sort = true,
+})

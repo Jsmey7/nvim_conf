@@ -30,4 +30,51 @@ return {
 			})
 		end,
 	},
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			local lspconfig = require("lspconfig")
+			-- Example configurations (tsserver will be picked up by mason-lspconfig)
+			lspconfig.lua_ls.setup({})
+			lspconfig.rust_analyzer.setup({})
+			lspconfig.ts_ls.setup({}) -- Ensure tsserver is setup here
+			-- ... other lspconfig setups
+		end,
+	},
+	{
+		"mason-org/mason-lspconfig.nvim",
+		dependencies = {
+			{ "mason-org/mason.nvim", opts = {} },
+			"neovim/nvim-lspconfig",
+		},
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"lua_ls",
+					"rust_analyzer",
+					"clangd",
+					"gopls",
+					"pylsp",
+					"pyrefly",
+					"java_language_server",
+					"ts_ls",
+				},
+			})
+		end,
+	},
+	{
+		"mfussenegger/nvim-dap",
+	},
+	{
+		"jay-babu/mason-nvim-dap.nvim",
+		dependencies = {
+			"mason-org/mason.nvim",
+			"mfussenegger/nvim-dap",
+		},
+		config = function()
+			require("mason-nvim-dap").setup({
+				ensure_installed = { "python", "codelldb", "delve" },
+			})
+		end,
+	},
 }

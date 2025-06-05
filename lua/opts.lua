@@ -3,6 +3,7 @@ local M = {}
 vim.o.termguicolors = true
 vim.g.have_nerd_font = true
 vim.opt.colorcolumn = "120"
+vim.opt.signcolumn = "yes"
 
 -- settings
 vim.o.number = true
@@ -43,5 +44,7 @@ vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.smartindent = true
+
+vim.opt.list = false
 
 return M

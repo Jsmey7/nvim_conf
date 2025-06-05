@@ -5,6 +5,9 @@ return {
 			require("conform").setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
+					go = { "goimports" },
+					cpp = { "clang-format" },
+					java = { "google-java-format" },
 					-- Conform will run multiple formatters sequentially
 					python = { "isort", "black" },
 					-- You can customize some of the format options for the filetype (:help conform.format)
