@@ -8,7 +8,7 @@ vim.opt.signcolumn = "yes"
 -- settings
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.mouse = "" --mouse disabled
+vim.o.mouse = "a" --mouse disabled
 vim.o.cursorline = true
 vim.o.showmode = false --show the current used mode
 vim.o.fillchars = "eob: "

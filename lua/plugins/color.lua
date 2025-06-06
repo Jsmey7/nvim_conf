@@ -27,6 +27,8 @@ return {
 			require("vscode").setup({
 				-- optional configuration here
 			})
+
+			vim.cmd.colorscheme("vscode")
 		end,
 	},
 	{
@@ -103,9 +105,7 @@ return {
 		"zenbones-theme/zenbones.nvim",
 		dependencies = "rktjmp/lush.nvim",
 		lazy = false,
-		config = function()
-			vim.cmd.colorscheme("zenbones")
-		end,
+		config = function() end,
 	},
 	{
 		"metalelf0/black-metal-theme-neovim",
