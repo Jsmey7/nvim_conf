@@ -7,6 +7,9 @@ end
 vim.api.nvim_set_hl(0, "WinSeparator", { link = "Normal", bold = true })
 vim.keymap.set("n", "<C-w>o", ":SimpleZoomToggle<CR>", opts("zoom into window while preserving the layout"))
 
+vim.keymap.set("n", "<C-c><C-c>", ":nohlsearch<CR>", opts("remove highlighting search"))
+vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR>", opts("remove highlighting search"))
+
 --terminal
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm size=14 direction=horizontal <CR>", opts("open terminal from bottum"))
 vim.keymap.set(
@@ -22,10 +25,28 @@ vim.keymap.set("t", "<C-k>", "exit<CR>", opts("kill terminal"))
 -- vim.keymap.set("t", "<leader>td", "<C-\\><C-n><C-w>k")
 -- vim.keymap.set("n", "<leader>ta", "<C-w>j<CR>a")
 
+-- sorround
+vim.keymap.set("n", "miw", "viw", opts("sorround select inside word"))
+vim.keymap.set("n", "maw", "vaw", opts("sorround select around word"))
+--
+-- comment
+
+local api = require("Comment.api")
+local esc = vim.api.nvim_replace_termcodes("<ESC>", true, false, true)
+
+vim.keymap.set("n", "<C-_>", function()
+	require("Comment.api").toggle.linewise.current()
+end, { noremap = true, silent = true })
+
+vim.keymap.set("x", "<C-_>", function()
+	vim.api.nvim_feedkeys(esc, "nx", false)
+	api.toggle.linewise(vim.fn.visualmode())
+end)
+
 -- buffers
 vim.keymap.set("n", "gn", ":bnext<CR>", opts("next buffer"))
 vim.keymap.set("n", "gp", ":bprevious<CR>", opts("previous buffer"))
-vim.keymap.set("n", "bc", ":bdelete<CR>", opts("delete buffer"))
+vim.keymap.set("n", "<leader>bc", ":bdelete<CR>", opts("delete buffer"))
 
 --oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
@@ -36,7 +57,6 @@ vim.keymap.set("n", "ge", "G", opts("goto end of file"))
 vim.keymap.set("n", "gy", "0", opts("goto start of line before indentation"))
 vim.keymap.set("n", "gj", "}", opts("go to next peragraph"))
 vim.keymap.set("n", "gk", "{", opts("go to previous peragraph"))
-vim.keymap.set("n", "miw", "viw", opts("select inner word (like helix)"))
 
 vim.keymap.set("n", "p", "p`]", opts("paste and keep the cursor at the end"))
 
