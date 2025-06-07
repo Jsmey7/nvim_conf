@@ -1,0 +1,763 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.105  000.103: event init
+000.173  000.068: early init
+000.284  000.111: locale set
+000.309  000.025: init first window
+000.578  000.270: inits 1
+000.583  000.005: window checked
+000.585  000.002: parsing arguments
+001.044  000.049  000.049: require('vim.shared')
+001.106  000.023  000.023: require('vim.inspect')
+001.146  000.034  000.034: require('vim._options')
+001.148  000.102  000.044: require('vim._editor')
+001.149  000.171  000.020: require('vim._init_packages')
+001.151  000.395: init lua interpreter
+002.744  001.593: nvim_ui_attach
+002.956  000.212: nvim_set_client_info
+002.958  000.001: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.068  000.067: event init
+000.131  000.062: early init
+000.203  000.072: locale set
+000.221  000.018: init first window
+000.410  000.189: inits 1
+000.416  000.006: window checked
+000.418  000.001: parsing arguments
+000.964  000.038  000.038: require('vim.shared')
+001.051  000.035  000.035: require('vim.inspect')
+001.092  000.028  000.028: require('vim._options')
+001.095  000.128  000.065: require('vim._editor')
+001.097  000.191  000.024: require('vim._init_packages')
+001.099  000.491: init lua interpreter
+001.142  000.043: expanding arguments
+001.158  000.016: inits 2
+001.338  000.180: init highlight
+001.338  000.001: waiting for UI
+001.434  000.096: done waiting for UI
+001.436  000.002: clear screen
+001.510  000.012  000.012: require('vim.keymap')
+002.097  000.081  000.081: sourcing nvim_exec2()
+002.426  000.260  000.260: require('vim.termcap')
+002.456  000.019  000.019: require('vim.text')
+002.531  001.093  000.720: require('vim._defaults')
+002.532  000.003: init default mappings & autocommands
+002.588  000.043  000.043: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/ftplugin.vim
+002.613  000.012  000.012: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/indent.vim
+002.788  000.019  000.019: require('vim.fs')
+002.848  000.058  000.058: require('vim.uri')
+002.863  000.146  000.069: require('vim.loader')
+003.182  000.281  000.281: require('lazy')
+003.197  000.008  000.008: require('ffi')
+003.225  000.025  000.025: require('lazy.stats')
+003.280  000.044  000.044: require('lazy.core.util')
+003.333  000.052  000.052: require('lazy.core.config')
+003.403  000.025  000.025: require('lazy.core.handler')
+003.598  000.069  000.069: require('lazy.pkg')
+003.602  000.153  000.084: require('lazy.core.meta')
+003.606  000.202  000.049: require('lazy.core.plugin')
+003.611  000.277  000.051: require('lazy.core.loader')
+003.748  000.058  000.058: require('lazy.core.fragments')
+017.516  000.027  000.027: require('lazy.core.handler.keys')
+017.548  000.028  000.028: require('lazy.core.handler.cmd')
+017.590  000.026  000.026: require('lazy.core.handler.event')
+017.592  000.042  000.016: require('lazy.core.handler.ft')
+017.881  000.055  000.055: sourcing nvim_exec2() called at /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/filetype.lua:0
+017.883  000.115  000.060: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/filetype.lua
+017.885  000.132  000.017: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+017.968  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+017.971  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+018.044  000.018  000.018: sourcing /home/josh/.local/share/nvim/lazy/nvim-colorizer.lua/plugin/colorizer.vim
+018.046  000.028  000.010: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+018.048  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+018.051  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+018.342  000.064  000.064: require('colorizer/nvim')
+018.442  000.099  000.099: require('colorizer/trie')
+018.514  000.461  000.298: require('colorizer')
+019.591  000.104  000.104: require('vim.health')
+019.600  000.256  000.152: require('vim.deprecated.health')
+019.683  000.040  000.040: require('vim.iter')
+019.969  000.054  000.054: require('vim.lsp.log')
+020.314  000.343  000.343: require('vim.lsp.protocol')
+020.413  000.097  000.097: require('vim.lsp.util')
+020.555  000.083  000.083: require('vim.lsp.sync')
+020.559  000.144  000.062: require('vim.lsp._changetracking')
+020.645  000.038  000.038: require('vim.lsp._transport')
+020.652  000.092  000.054: require('vim.lsp.rpc')
+020.680  000.855  000.126: require('vim.lsp')
+020.931  000.250  000.250: require('lspconfig.util')
+021.002  000.065  000.065: require('vim.version')
+021.889  002.108  000.938: sourcing /home/josh/.local/share/nvim/lazy/nvim-lspconfig/plugin/lspconfig.lua
+021.893  002.121  000.013: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+021.899  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+021.907  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+022.009  000.028  000.028: require('lspconfig.async')
+022.010  000.069  000.041: require('lspconfig.configs')
+022.015  000.106  000.037: require('lspconfig')
+022.080  000.064  000.064: require('lspconfig.configs.lua_ls')
+022.167  000.036  000.036: require('lspconfig.manager')
+022.201  000.032  000.032: require('lspconfig.configs.clangd')
+022.361  000.037  000.037: require('lspconfig.configs.rust_analyzer')
+022.457  000.054  000.054: require('lspconfig.configs.ts_ls')
+022.611  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+022.615  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+022.807  000.030  000.030: require('mason-core.path')
+022.906  000.018  000.018: require('mason-core.functional.data')
+022.936  000.028  000.028: require('mason-core.functional.function')
+022.974  000.035  000.035: require('mason-core.functional.list')
+023.020  000.028  000.028: require('mason-core.functional.relation')
+023.042  000.020  000.020: require('mason-core.functional.logic')
+023.111  000.068  000.068: require('mason-core.functional.number')
+023.180  000.062  000.062: require('mason-core.functional.string')
+023.242  000.060  000.060: require('mason-core.functional.table')
+023.300  000.057  000.057: require('mason-core.functional.type')
+023.303  000.451  000.074: require('mason-core.functional')
+023.358  000.550  000.099: require('mason-core.platform')
+023.438  000.078  000.078: require('mason.settings')
+023.443  000.708  000.050: require('mason-core.installer.InstallLocation')
+023.574  000.095  000.095: require('mason-core.log')
+023.577  000.112  000.017: require('mason-core.EventEmitter')
+023.609  000.031  000.031: require('mason-registry.sources')
+023.617  000.173  000.030: require('mason-registry')
+023.618  001.000  000.118: require('mason')
+023.724  000.057  000.057: require('mason.api.command')
+023.739  000.004  000.004: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+023.744  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+023.797  000.014  000.014: require('mason-lspconfig.settings')
+023.799  000.053  000.039: require('mason-lspconfig')
+023.830  000.026  000.026: require('mason-core.async')
+023.872  000.018  000.018: require('mason-core.async.control')
+023.890  000.017  000.017: require('mason-core.result')
+023.919  000.011  000.011: require('mason-core.async.uv')
+023.922  000.031  000.020: require('mason-core.fs')
+023.929  000.099  000.032: require('mason-registry.installer')
+024.036  000.054  000.054: require('mason-core.optional')
+024.112  000.041  000.041: require('mason-core.process')
+024.133  000.020  000.020: require('mason-core.spawn')
+024.135  000.079  000.018: require('mason-core.installer.managers.powershell')
+024.148  000.013  000.013: require('mason.version')
+024.150  000.112  000.020: require('mason-core.fetch')
+024.164  000.014  000.014: require('mason-core.providers')
+024.256  000.031  000.031: require('mason-core.purl')
+024.259  000.055  000.024: require('mason-core.package.AbstractPackage')
+024.340  000.017  000.017: require('mason-core.installer.compiler.expr')
+024.342  000.045  000.028: require('mason-core.installer.compiler.link')
+024.421  000.013  000.013: require('mason-core.installer.context.InstallContextCwd')
+024.435  000.014  000.014: require('mason-core.installer.context.InstallContextFs')
+024.466  000.030  000.030: require('mason-core.installer.context.InstallContextSpawn')
+024.511  000.043  000.043: require('mason-core.receipt')
+024.519  000.131  000.030: require('mason-core.installer.context')
+024.520  000.143  000.012: require('mason-core.installer')
+024.539  000.183  000.040: require('mason-core.installer.managers.std')
+024.540  000.197  000.015: require('mason-core.installer.compiler.schemas')
+024.575  000.035  000.035: require('mason-core.installer.compiler.util')
+024.579  000.301  000.024: require('mason-core.installer.compiler')
+024.598  000.018  000.018: require('mason-core.installer.linker')
+024.599  000.339  000.020: require('mason-core.installer.InstallRunner')
+024.618  000.018  000.018: require('mason-core.installer.UninstallRunner')
+024.622  000.435  000.023: require('mason-core.package')
+024.623  000.458  000.023: require('mason-registry.sources.util')
+024.628  000.667  000.029: require('mason-registry.sources.github')
+026.868  000.005  000.005: require('vim.F')
+026.949  000.020  000.020: require('mason-lspconfig.mappings')
+026.952  000.073  000.053: require('mason-lspconfig.features.automatic_enable')
+048.687  000.030  000.030: require('mason-lspconfig.lsp.java_language_server')
+066.510  000.090  000.090: require('mason-lspconfig.lsp.pylsp')
+068.025  000.026  000.026: require('mason-lspconfig.notify')
+068.043  000.099  000.073: require('mason-lspconfig.api.command')
+068.312  000.028  000.028: sourcing /home/josh/.local/share/nvim/lazy/lush.nvim/plugin/lush.vim
+068.314  000.047  000.019: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+068.322  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+068.334  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+068.344  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+068.349  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+068.459  000.004  000.004: sourcing /home/josh/.local/share/nvim/lazy/diagflow.nvim/plugin/diagflow.vim
+068.460  000.013  000.009: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+068.462  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+068.469  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+068.784  000.155  000.155: require('diagflow.lazy')
+068.804  000.304  000.149: require('diagflow')
+069.845  001.000  001.000: require('vim.diagnostic')
+069.931  000.004  000.004: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+069.935  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.241  000.037  000.037: require('black-metal.config')
+070.243  000.307  000.269: require('black-metal')
+070.386  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.390  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.628  000.023  000.023: require('dap.utils')
+070.658  000.112  000.089: require('dap')
+070.663  000.271  000.159: require('nvim-dap-virtual-text')
+070.702  000.007  000.007: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.710  000.006  000.006: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.768  000.034  000.034: sourcing /home/josh/.local/share/nvim/lazy/nvim-dap/plugin/dap.lua
+070.769  000.045  000.011: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.772  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.775  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.791  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.793  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.797  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.800  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+070.926  000.017  000.017: require('nio.tasks')
+070.942  000.015  000.015: require('nio.control')
+071.002  000.059  000.059: require('nio.uv')
+071.018  000.015  000.015: require('nio.tests')
+071.046  000.016  000.016: require('vim.ui')
+071.047  000.029  000.013: require('nio.ui')
+071.071  000.013  000.013: require('nio.streams')
+071.072  000.024  000.011: require('nio.file')
+071.117  000.021  000.021: require('nio.util')
+071.136  000.051  000.030: require('nio.logger')
+071.138  000.066  000.015: require('nio.lsp')
+071.153  000.014  000.014: require('nio.process')
+071.157  000.333  000.094: require('nio')
+071.338  000.011  000.011: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+071.340  000.032  000.021: require('dapui.config.highlights')
+071.364  000.023  000.023: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+071.392  000.197  000.142: require('dapui.config')
+071.395  000.218  000.022: require('dapui.util')
+071.416  000.020  000.020: require('dapui.windows.layout')
+071.417  000.260  000.022: require('dapui.windows')
+071.435  000.017  000.017: require('dapui.controls')
+071.438  000.637  000.027: require('dapui')
+071.486  000.012  000.012: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+071.614  000.021  000.021: require('dapui.client.types')
+071.616  000.067  000.046: require('dapui.client')
+071.633  000.017  000.017: require('dap.breakpoints')
+071.652  000.013  000.013: require('dapui.client.lib')
+071.685  000.017  000.017: require('dapui.render.canvas')
+071.686  000.030  000.013: require('dapui.elements.breakpoints')
+071.708  000.015  000.015: require('dapui.components.breakpoints')
+071.726  000.011  000.011: require('dapui.elements.repl')
+071.738  000.011  000.011: require('dapui.elements.scopes')
+071.754  000.012  000.012: require('dapui.components.scopes')
+071.768  000.013  000.013: require('dapui.components.variables')
+071.782  000.010  000.010: require('dapui.elements.stacks')
+071.809  000.012  000.012: require('dapui.components.frames')
+071.809  000.024  000.012: require('dapui.components.threads')
+071.825  000.011  000.011: require('dapui.elements.watches')
+071.841  000.013  000.013: require('dapui.components.watches')
+071.856  000.011  000.011: require('dapui.elements.hover')
+071.870  000.011  000.011: require('dapui.components.hover')
+071.884  000.012  000.012: require('dapui.elements.console')
+072.117  000.018  000.018: require('nvim-treesitter.utils')
+072.402  000.052  000.052: require('vim.treesitter.language')
+072.424  000.020  000.020: require('vim.func')
+072.446  000.020  000.020: require('vim.func._memoize')
+072.513  000.224  000.132: require('vim.treesitter.query')
+072.544  000.029  000.029: require('vim.treesitter._range')
+072.573  000.320  000.066: require('vim.treesitter.languagetree')
+072.577  000.360  000.040: require('vim.treesitter')
+072.875  000.757  000.397: require('nvim-treesitter.parsers')
+073.007  000.025  000.025: require('nvim-treesitter.compat')
+073.070  000.041  000.041: require('nvim-treesitter.ts_utils')
+073.073  000.065  000.024: require('nvim-treesitter.tsrange')
+073.088  000.015  000.015: require('nvim-treesitter.caching')
+073.094  000.149  000.044: require('nvim-treesitter.query')
+073.103  000.194  000.045: require('nvim-treesitter.configs')
+073.104  000.228  000.034: require('nvim-treesitter.info')
+073.137  000.033  000.033: require('nvim-treesitter.shell_command_selectors')
+073.154  001.085  000.051: require('nvim-treesitter.install')
+073.172  000.017  000.017: require('nvim-treesitter.statusline')
+073.198  000.025  000.025: require('nvim-treesitter.query_predicates')
+073.199  001.210  000.083: require('nvim-treesitter')
+073.575  001.602  000.392: sourcing /home/josh/.local/share/nvim/lazy/nvim-treesitter/plugin/nvim-treesitter.lua
+073.578  001.616  000.014: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+073.582  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+073.588  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+074.660  000.019  000.019: sourcing /home/josh/.local/share/nvim/lazy/nvim-web-devicons/plugin/nvim-web-devicons.vim
+074.663  000.031  000.012: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+074.679  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+074.698  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+074.708  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+074.711  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+074.850  000.031  000.031: require('bufferline.lazy')
+074.899  000.045  000.045: require('bufferline.commands')
+074.968  000.067  000.067: require('bufferline.config')
+074.972  000.259  000.117: require('bufferline')
+075.252  000.109  000.109: require('bufferline.utils')
+075.254  000.278  000.169: require('bufferline.groups')
+075.330  000.046  000.046: require('bufferline.constants')
+075.388  000.055  000.055: require('bufferline.colors')
+075.594  000.108  000.108: require('bufferline.highlights')
+076.453  000.396  000.396: require('bufferline.hover')
+076.570  000.045  000.045: require('bufferline.ui')
+076.668  000.003  000.003: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+076.672  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+076.765  000.091  000.091: require('mason-nvim-dap')
+076.780  000.014  000.014: require('mason-nvim-dap.settings')
+076.849  000.018  000.018: require('mason-nvim-dap.mappings.source')
+076.850  000.039  000.020: require('mason-nvim-dap.ensure_installed')
+076.944  000.035  000.035: require('dap.ext.vscode')
+076.962  000.017  000.017: require('mason-nvim-dap.mappings.filetypes')
+077.000  000.013  000.013: require('mason-core.notify')
+077.009  000.043  000.029: require('mason-nvim-dap.api.command')
+077.100  000.021  000.021: sourcing /home/josh/.local/share/nvim/lazy/simple-zoom.nvim/plugin/simple-zoom.lua
+077.102  000.035  000.014: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+077.105  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+077.109  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+077.245  000.128  000.128: require('simple-zoom')
+077.324  000.011  000.011: sourcing /home/josh/.local/share/nvim/lazy/zen-mode.nvim/plugin/zen-mode.vim
+077.326  000.024  000.013: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+077.329  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+077.342  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+077.534  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+077.537  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+077.707  000.133  000.133: require('blink.cmp')
+077.755  000.020  000.020: require('blink.cmp.lib.async')
+077.784  000.012  000.012: require('blink.cmp.config.utils')
+077.798  000.013  000.013: require('blink.cmp.config.keymap')
+077.826  000.013  000.013: require('blink.cmp.config.completion.keyword')
+077.840  000.013  000.013: require('blink.cmp.config.completion.trigger')
+077.853  000.013  000.013: require('blink.cmp.config.completion.list')
+077.881  000.027  000.027: require('blink.cmp.config.completion.accept')
+077.906  000.024  000.024: require('blink.cmp.config.completion.menu')
+077.923  000.017  000.017: require('blink.cmp.config.completion.documentation')
+077.937  000.014  000.014: require('blink.cmp.config.completion.ghost_text')
+077.938  000.140  000.020: require('blink.cmp.config.completion')
+077.975  000.037  000.037: require('blink.cmp.config.fuzzy')
+077.996  000.020  000.020: require('blink.cmp.config.sources')
+078.011  000.014  000.014: require('blink.cmp.config.signature')
+078.027  000.015  000.015: require('blink.cmp.config.snippets')
+078.042  000.014  000.014: require('blink.cmp.config.appearance')
+078.059  000.017  000.017: require('blink.cmp.config.modes.cmdline')
+078.071  000.011  000.011: require('blink.cmp.config.modes.term')
+078.072  000.316  000.023: require('blink.cmp.config')
+078.083  000.011  000.011: require('blink.cmp.lib.event_emitter')
+078.100  000.016  000.016: require('blink.cmp.lib.utils')
+078.102  000.394  000.031: require('blink.cmp.sources.lib')
+078.123  000.568  000.041: sourcing /home/josh/.local/share/nvim/lazy/blink.cmp/plugin/blink-cmp.lua
+078.126  000.578  000.010: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+078.130  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+078.134  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+078.159  000.013  000.013: require('blink-cmp')
+078.934  000.034  000.034: require('blink.cmp.config.modes.types')
+079.140  000.016  000.016: require('blink.cmp.fuzzy.download.system')
+079.150  000.044  000.028: require('blink.cmp.fuzzy.download.files')
+079.151  000.059  000.015: require('blink.cmp.fuzzy.download.git')
+079.152  000.089  000.030: require('blink.cmp.fuzzy.download')
+079.215  000.023  000.023: require('vim._system')
+081.967  000.010  000.010: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+081.976  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+082.314  000.025  000.025: require('lualine_require')
+082.552  000.572  000.547: require('lualine')
+082.697  000.010  000.010: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.035  000.047  000.047: require('lualine.highlight')
+083.311  000.010  000.010: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.319  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.323  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.328  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.333  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.336  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.340  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.343  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.346  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.405  000.003  000.003: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.409  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.413  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.415  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.418  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.422  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.424  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.427  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.431  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.433  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.435  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.439  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.456  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+083.465  000.007  000.007: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.201  000.006  000.006: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.208  000.003  000.003: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.409  000.004  000.004: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.415  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.418  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.459  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.464  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.479  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.483  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.488  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.491  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.494  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.496  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.499  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.501  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.504  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.509  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.532  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.535  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.538  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.540  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.543  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.546  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.638  000.003  000.003: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.641  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.643  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.646  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.974  000.004  000.004: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.979  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.982  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.985  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.991  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.994  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+084.997  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.003  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.007  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.010  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.013  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.016  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.019  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.023  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.028  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.031  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.034  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.050  000.014  000.014: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.053  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.056  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.059  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.063  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.067  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.071  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.073  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.077  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.080  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.082  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.191  000.031  000.031: require('lualine.utils.mode')
+085.760  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.764  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+085.966  000.035  000.035: require('vscode.config')
+086.118  000.150  000.150: require('vscode.theme')
+086.133  000.014  000.014: require('vscode.utils')
+086.134  000.368  000.169: require('vscode')
+086.190  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+086.198  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+086.354  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+086.357  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+086.762  000.401  000.401: require('mini.icons')
+086.832  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+086.836  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+086.926  000.081  000.081: require('oil')
+086.942  000.016  000.016: require('oil.ringbuf')
+086.974  000.031  000.031: require('oil.config')
+088.545  001.518  001.518: require('vim.filetype')
+089.015  000.051  000.051: require('oil.log')
+089.025  000.110  000.059: require('oil.fs')
+089.181  000.058  000.058: require('oil.constants')
+089.220  000.193  000.135: require('oil.util')
+089.326  000.003  000.003: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+089.334  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+089.555  000.046  000.046: require('nvim-autopairs._log')
+089.588  000.032  000.032: require('nvim-autopairs.utils')
+089.700  000.046  000.046: require('nvim-autopairs.conds')
+089.704  000.079  000.033: require('nvim-autopairs.rule')
+089.706  000.118  000.039: require('nvim-autopairs.rules.basic')
+089.724  000.382  000.186: require('nvim-autopairs')
+089.925  000.003  000.003: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+089.931  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+090.113  000.041  000.041: require('toggleterm.lazy')
+090.130  000.016  000.016: require('toggleterm.constants')
+090.207  000.075  000.075: require('toggleterm.terminal')
+090.211  000.279  000.147: require('toggleterm')
+090.265  000.026  000.026: require('toggleterm.colors')
+090.291  000.025  000.025: require('toggleterm.utils')
+090.295  000.082  000.030: require('toggleterm.config')
+090.816  000.040  000.040: require('toggleterm.commandline')
+090.893  000.022  000.022: sourcing /home/josh/.local/share/nvim/lazy/conform.nvim/plugin/conform.lua
+090.895  000.035  000.013: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+090.899  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+090.902  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.060  000.156  000.156: require('conform')
+091.116  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.121  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.215  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.220  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.456  000.015  000.015: sourcing /home/josh/.local/share/nvim/lazy/plenary.nvim/plugin/plenary.vim
+091.458  000.025  000.010: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.460  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.476  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.567  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.646  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.887  000.218  000.218: sourcing /home/josh/.local/share/nvim/lazy/telescope.nvim/plugin/telescope.lua
+091.890  000.229  000.011: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.894  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+091.902  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+092.130  000.055  000.055: require('telescope._extensions')
+092.135  000.228  000.173: require('telescope')
+092.800  000.275  000.275: require('plenary.bit')
+092.904  000.101  000.101: require('plenary.functional')
+092.977  000.559  000.184: require('plenary.path')
+092.992  000.749  000.190: require('plenary.strings')
+093.053  000.060  000.060: require('telescope.deprecated')
+093.230  000.086  000.086: require('plenary.log')
+093.252  000.121  000.035: require('telescope.log')
+093.324  000.013  000.013: require('plenary.compat')
+093.327  000.040  000.027: require('plenary.job')
+093.342  000.014  000.014: require('telescope.state')
+093.348  000.095  000.041: require('telescope.utils')
+093.351  000.297  000.082: require('telescope.sorters')
+094.437  002.302  001.196: require('telescope.config')
+094.987  000.004  000.004: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+094.992  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+095.315  000.015  000.015: require('Comment.config')
+095.367  000.032  000.032: require('Comment.ft')
+095.370  000.053  000.022: require('Comment.utils')
+095.386  000.016  000.016: require('Comment.opfunc')
+095.400  000.013  000.013: require('Comment.extra')
+095.402  000.226  000.128: require('Comment.api')
+095.453  000.296  000.071: sourcing /home/josh/.local/share/nvim/lazy/Comment.nvim/plugin/Comment.lua
+095.456  000.308  000.012: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+095.460  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+095.465  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+095.482  000.016  000.016: require('Comment')
+095.714  000.109  000.109: require('gitsigns')
+095.857  000.130  000.130: require('gitsigns.highlight')
+095.907  000.029  000.029: require('gitsigns.debug.log')
+095.944  000.036  000.036: require('gitsigns.config')
+096.205  000.020  000.020: require('gitsigns.debounce')
+096.210  000.618  000.294: sourcing /home/josh/.local/share/nvim/lazy/gitsigns.nvim/plugin/gitsigns.lua
+096.213  000.630  000.012: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+096.218  000.002  000.002: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+096.222  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+096.254  000.001  000.001: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+096.256  000.000  000.000: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+096.312  000.019  000.019: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/editorconfig.lua
+096.313  000.030  000.011: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+096.395  000.074  000.074: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/gzip.vim
+096.396  000.081  000.008: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+096.445  000.040  000.040: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/man.lua
+096.447  000.049  000.009: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+096.868  000.134  000.134: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+096.883  000.421  000.286: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/matchit.vim
+096.885  000.430  000.009: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+097.014  000.101  000.101: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/matchparen.vim
+097.016  000.123  000.023: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+097.034  000.005  000.005: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/netrwPlugin.vim
+097.035  000.016  000.011: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+097.080  000.034  000.034: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/osc52.lua
+097.082  000.044  000.010: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+098.177  001.083  001.083: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/rplugin.vim
+098.184  001.099  000.017: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+098.264  000.039  000.039: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/shada.vim
+098.266  000.067  000.028: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+098.305  000.009  000.009: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/spellfile.vim
+098.306  000.022  000.013: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+098.378  000.061  000.061: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/tarPlugin.vim
+098.379  000.071  000.009: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+098.436  000.044  000.044: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/tohtml.lua
+098.437  000.055  000.011: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+098.502  000.011  000.011: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/tutor.vim
+098.504  000.034  000.023: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+098.589  000.070  000.070: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/plugin/zipPlugin.vim
+098.591  000.081  000.010: sourcing nvim_exec2() called at /home/josh/.config/nvim/init.lua:0
+098.916  000.156  000.156: require('opts')
+099.279  000.360  000.360: require('keymaps')
+099.379  000.063  000.063: require('telescope.builtin')
+099.387  000.107  000.044: require('telescope_conf')
+100.228  000.006  000.006: sourcing /home/josh/.local/share/nvim/lazy/zenbones.nvim/autoload/bones.vim
+100.279  000.035  000.035: require('zenbones.util')
+100.376  000.014  000.014: require('lush.math')
+100.399  000.021  000.021: require('lush.vivid.rgb.convert')
+100.399  000.061  000.026: require('lush.vivid.hsl.convert')
+100.432  000.032  000.032: require('lush.vivid.hsl_like')
+100.433  000.119  000.025: require('lush.vivid.hsl.type')
+100.511  000.036  000.036: require('lush.vivid.hsluv.lib')
+100.511  000.050  000.014: require('lush.vivid.hsluv.convert')
+100.512  000.079  000.029: require('lush.vivid.hsluv.type')
+100.514  000.233  000.036: require('lush')
+100.544  000.016  000.016: require('zenbones.specs')
+100.650  000.104  000.104: require('zenbones.palette')
+100.722  000.067  000.067: require('zenbones.specs.dark')
+100.787  000.020  000.020: require('lush.errors')
+100.790  000.061  000.041: require('lush.parser')
+103.199  002.684  002.437: require('zenbones')
+103.238  000.036  000.036: require('lush.compiler')
+104.826  000.036  000.036: require('zenbones.term')
+104.874  004.751  001.720: sourcing /home/josh/.local/share/nvim/lazy/zenbones.nvim/colors/zenbones.vim
+104.909  000.015  000.015: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.223  000.009  000.009: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.543  000.050  000.050: require('lualine.themes.zenbones_dark_default')
+105.549  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.566  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.568  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.569  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.570  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.572  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.573  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.574  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.576  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.578  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.579  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.580  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.581  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.582  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.583  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.585  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.586  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.587  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.588  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.589  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.591  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.592  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.593  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.594  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.595  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.596  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.598  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.599  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.601  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.602  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.603  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.604  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.606  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.607  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.619  000.012  000.012: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.622  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.623  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.625  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.626  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.627  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.628  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.629  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.631  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.632  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.634  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.635  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.636  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.638  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.639  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.640  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.641  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.656  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.658  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.660  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.661  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.662  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.663  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.664  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.665  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.668  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.669  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.670  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.671  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.672  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.673  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.674  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.676  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.677  000.000  000.000: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.678  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.679  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.680  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.689  000.003  000.003: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.696  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.702  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.705  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.708  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.711  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.714  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.717  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.720  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.724  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.752  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.759  000.005  000.005: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.782  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.785  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.804  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.808  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.825  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.835  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.837  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.840  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.843  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.847  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.850  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.852  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.855  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.857  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.859  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.862  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.882  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.885  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.887  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.891  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.893  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.909  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.912  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.916  000.003  000.003: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.919  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.921  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.923  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.959  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.970  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.978  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+105.987  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.012  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.016  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.019  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.035  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.037  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.040  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.042  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.045  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.047  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.050  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.061  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.064  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.066  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.068  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.071  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.073  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.076  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.100  000.002  000.002: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.103  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.106  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.108  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.111  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.113  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.115  000.001  000.001: sourcing nvim_exec2() called at ColorScheme Autocommands for "*":0
+106.820  104.165  074.616: sourcing /home/josh/.config/nvim/init.lua
+106.827  000.075: sourcing vimrc file(s)
+106.944  000.024  000.024: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/filetype.lua
+107.058  000.031  000.031: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/syntax/synload.vim
+107.101  000.132  000.101: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.1/share/nvim/runtime/syntax/syntax.vim
+107.109  000.125: inits 3
+108.110  001.002: reading ShaDa
+108.493  000.055  000.055: require('gitsigns.async')
+108.542  000.377: opening buffers
+108.583  000.033  000.033: require('bufferline.state')
+108.670  000.095: BufEnter autocommands
+108.672  000.001: editing files in windows
+108.681  000.009: VimEnter autocommands
+108.750  000.069: UIEnter autocommands
+108.751  000.001: before starting main loop
+109.042  000.027  000.027: require('bufferline.pick')
+109.079  000.034  000.034: require('bufferline.duplicates')
+109.129  000.007  000.007: sourcing nvim_exec2()
+109.132  000.052  000.044: require('bufferline.diagnostics')
+109.172  000.040  000.040: require('bufferline.models')
+109.175  000.280  000.128: require('bufferline.buffers')
+109.273  000.044  000.044: require('nvim-web-devicons.filetypes')
+109.408  000.102  000.102: require('nvim-web-devicons.default.icons_by_filename')
+109.718  000.309  000.309: require('nvim-web-devicons.default.icons_by_file_extension')
+109.794  000.068  000.068: require('nvim-web-devicons.default.icons_by_operating_system')
+109.818  000.023  000.023: require('nvim-web-devicons.default.icons_by_desktop_environment')
+109.837  000.018  000.018: require('nvim-web-devicons.default.icons_by_window_manager')
+109.838  000.559  000.039: require('nvim-web-devicons.icons-default')
+110.153  000.962  000.359: require('nvim-web-devicons')
+113.962  000.069  000.069: require('bufferline.numbers')
+114.098  000.053  000.053: require('bufferline.sorters')
+114.247  000.110  000.110: require('bufferline.tabpages')
+114.325  000.056  000.056: require('bufferline.offset')
+114.360  000.033  000.033: require('bufferline.custom_area')
+114.707  004.394: first screen update
+114.709  000.001: --- NVIM STARTED ---
+
