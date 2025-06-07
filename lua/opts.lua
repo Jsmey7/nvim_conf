@@ -4,7 +4,6 @@ vim.o.termguicolors = true
 vim.g.have_nerd_font = true
 vim.opt.colorcolumn = "120"
 vim.opt.signcolumn = "yes"
-vim.opt.tabstop = 4
 
 -- settings
 vim.o.number = true
@@ -40,12 +39,15 @@ vim.o.inccommand = "split"
 vim.o.confirm = true
 
 vim.o.autowrite = true
-vim.o.expandtab = true
 -- table indentation settings
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
 vim.o.smartindent = true
+vim.opt.autoindent = true
 
 vim.opt.list = false
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 
 return M

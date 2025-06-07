@@ -40,3 +40,4 @@ vim.diagnostic.config({
 	signs = true,
 	severity_sort = true,
 })
+vim.api.nvim_set_hl(0, "BlinkCmpGhostText", { fg = "#666666", italic = true, blend = 85 })

@@ -69,6 +69,7 @@ return {
 					"pyrefly",
 					"java_language_server",
 					"ts_ls",
+					"zls",
 				},
 			})
 		end,

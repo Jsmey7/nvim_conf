@@ -38,6 +38,7 @@ return {
 					},
 				},
 				menu = {
+					auto_show = true,
 					draw = {
 						treesitter = { "lsp" },
 					},
