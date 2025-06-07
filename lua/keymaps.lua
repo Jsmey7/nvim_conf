@@ -115,4 +115,8 @@ vim.keymap.set("n", "<F13>", ":DapRestartFrame<CR>", opts("restart frame (debugg
 -- helix like yank
 vim.keymap.set("x", "y", "ygv<Esc>", opts("copy selected text"))
 
+-- marks
+vim.keymap.set("n", "<leader>md", ":delmarks a-z <CR>", opts("delte all local marks"))
+vim.keymap.set("n", "<leader>md", ":delmarks a-zA-Z <CR>", opts("delte all local marks"))
+
 return M

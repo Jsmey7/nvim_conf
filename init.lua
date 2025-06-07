@@ -33,6 +33,8 @@ require("lazy").setup({
 require("opts")
 require("keymaps")
 require("telescope_conf")
+require("harpoon_conf")
+
 vim.cmd.colorscheme("zenbones")
 
 vim.diagnostic.config({
