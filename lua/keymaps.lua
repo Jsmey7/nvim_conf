@@ -112,4 +112,7 @@ vim.keymap.set("n", "<F3>", ":DapStepOut<CR>", opts("step out (debugging)"))
 vim.keymap.set("n", "<F4>", ":DapStepInto<CR>", opts("step into (debugging)"))
 vim.keymap.set("n", "<F13>", ":DapRestartFrame<CR>", opts("restart frame (debugging)"))
 
+-- helix like yank
+vim.keymap.set("x", "y", "ygv<Esc>", opts("copy selected text"))
+
 return M

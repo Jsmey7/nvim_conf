@@ -27,8 +27,6 @@ return {
 			require("vscode").setup({
 				-- optional configuration here
 			})
-
-			vim.cmd.colorscheme("vscode")
 		end,
 	},
 	{

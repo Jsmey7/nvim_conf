@@ -4,11 +4,12 @@ vim.o.termguicolors = true
 vim.g.have_nerd_font = true
 vim.opt.colorcolumn = "120"
 vim.opt.signcolumn = "yes"
+vim.opt.tabstop = 4
 
 -- settings
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.mouse = "a" --mouse disabled
+vim.o.mouse = "" --mouse disabled
 vim.o.cursorline = true
 vim.o.showmode = false --show the current used mode
 vim.o.fillchars = "eob: "

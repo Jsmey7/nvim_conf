@@ -33,6 +33,7 @@ require("lazy").setup({
 require("opts")
 require("keymaps")
 require("telescope_conf")
+vim.cmd.colorscheme("zenbones")
 
 vim.diagnostic.config({
 	update_in_insert = true,
