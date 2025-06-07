@@ -36,6 +36,17 @@ return {
 			local lspconfig = require("lspconfig")
 			-- Example configurations (tsserver will be picked up by mason-lspconfig)
 			lspconfig.lua_ls.setup({})
+			lspconfig.clangd.setup({
+				settings = {
+					clangd = {
+						arguments = {
+							"-std=c++23",
+							-- other clangd arguments if needed
+						},
+					},
+				},
+				filetypes = { "c", "cpp", "h", "hpp", "hxx", "cxx" },
+			})
 			lspconfig.rust_analyzer.setup({})
 			lspconfig.ts_ls.setup({}) -- Ensure tsserver is setup here
 			-- ... other lspconfig setups
