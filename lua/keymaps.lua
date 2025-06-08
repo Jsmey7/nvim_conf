@@ -117,6 +117,6 @@ vim.keymap.set("x", "y", "ygv<Esc>", opts("copy selected text"))
 
 -- marks
 vim.keymap.set("n", "<leader>md", ":delmarks a-z <CR>", opts("delte all local marks"))
-vim.keymap.set("n", "<leader>md", ":delmarks a-zA-Z <CR>", opts("delte all local marks"))
+vim.keymap.set("n", "<leader>mda", ":delmarks a-zA-Z <CR>", opts("delte all marks"))
 
 return M
