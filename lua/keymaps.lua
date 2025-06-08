@@ -24,7 +24,7 @@ vim.keymap.set("t", "<C-k>", "exit<CR>", opts("kill terminal"))
 -- vim.keymap.set("t", "<leader>tc", "<C-\\><C-n>:ToggleTerm<CR>", opts("close terminal (detach)"))
 -- vim.keymap.set("t", "<leader>td", "<C-\\><C-n><C-w>k")
 -- vim.keymap.set("n", "<leader>ta", "<C-w>j<CR>a")
-
+--
 -- sorround
 vim.keymap.set("n", "miw", "viw", opts("sorround select inside word"))
 vim.keymap.set("n", "maw", "vaw", opts("sorround select around word"))
@@ -51,8 +51,8 @@ vim.keymap.set("n", "<leader>bc", ":bdelete<CR>", opts("delete buffer"))
 --oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- goto
-vim.keymap.set("n", "gl", "$", opts("goto start of line"))
-vim.keymap.set("n", "gh", "^", opts("goto end of line"))
+vim.keymap.set("n", "gl", "$", opts("goto end of line"))
+vim.keymap.set("n", "gh", "^", opts("goto start of line"))
 vim.keymap.set("n", "ge", "G", opts("goto end of file"))
 vim.keymap.set("n", "gy", "0", opts("goto start of line before indentation"))
 vim.keymap.set("n", "gj", "}", opts("go to next peragraph"))
