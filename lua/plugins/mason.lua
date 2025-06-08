@@ -70,7 +70,6 @@ return {
 					"java_language_server",
 					"ts_ls",
 					"zls",
-					"ltex",
 				},
 			})
 		end,
