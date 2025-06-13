@@ -11,20 +11,26 @@ vim.keymap.set("n", "<C-c><C-c>", ":nohlsearch<CR>", opts("remove highlighting s
 vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR>", opts("remove highlighting search"))
 
 --terminal
-vim.keymap.set("n", "<leader>tt", ":ToggleTerm size=14 direction=horizontal <CR>", opts("open terminal from bottum"))
+
 vim.keymap.set(
 	"n",
-	"<leader>tr",
-	":ToggleTerm size=50 direction=vertical <CR>",
-	opts("open terminal from right side vertical")
+	"<leader>tt",
+	":vnew<CR>:terminal<CR>:vertical resize -28<CR>a",
+	opts("open small treminal on the right side")
 )
-vim.keymap.set("n", "<leader>tf", ":ToggleTerm size=14 direction=float <CR>", opts("open floating terminal"))
-vim.keymap.set("t", "<C-k>", "exit<CR>", opts("kill terminal"))
+vim.keymap.set(
+	"n",
+	"<leader>tl",
+	":vnew<CR>:terminal<CR>:vertical resize -5<CR>a",
+	opts("open large treminal on the right side")
+)
 
--- vim.keymap.set("t", "<leader>tc", "<C-\\><C-n>:ToggleTerm<CR>", opts("close terminal (detach)"))
--- vim.keymap.set("t", "<leader>td", "<C-\\><C-n><C-w>k")
--- vim.keymap.set("n", "<leader>ta", "<C-w>j<CR>a")
---
+vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", opts("window mode (switch between windows with ljkh)"))
+vim.keymap.set("t", "<C-x>", "<C-\\><C-n>", opts("switch to command mode from terminal mode"))
+
+vim.keymap.set("t", "<C-k>", "exit<CR>", opts("kill terminal (from terminal mode)"))
+vim.keymap.set("n", "<C-k>", ":q<CR>", opts("kill treminal or any buffer from normal mode"))
+
 -- sorround
 vim.keymap.set("n", "miw", "viw", opts("sorround select inside word"))
 vim.keymap.set("n", "maw", "vaw", opts("sorround select around word"))
