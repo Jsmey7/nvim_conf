@@ -55,6 +55,8 @@ return {
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
+		-- Load when opening/creating any file (most common for LSP setup)
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
@@ -77,6 +79,7 @@ return {
 	},
 	{
 		"mfussenegger/nvim-dap",
+		cmd = { "DapContinue", "DapTerminate", "DapToggleBreakpoint", "DapStepInto", "DapStepOver", "DapStepOut" },
 		dependencies = {
 			"rcarriga/nvim-dap-ui",
 			"theHamsta/nvim-dap-virtual-text",
@@ -100,6 +103,13 @@ return {
 	},
 	{
 		"jay-babu/mason-nvim-dap.nvim",
+		cmd = {
+			"DapInstall",
+			"DapUninstall",
+			"DapUpdate", -- Mason-DAP commands
+			"DapContinue",
+			"DapToggleBreakpoint", -- Common nvim-dap commands that will trigger it
+		},
 		dependencies = {
 			"mason-org/mason.nvim",
 			"mfussenegger/nvim-dap",

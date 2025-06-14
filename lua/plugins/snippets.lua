@@ -8,6 +8,7 @@ return {
 
 	{
 		"saghen/blink.cmp",
+		event = "InsertEnter",
 		-- optional: provides snippets for the snippet source
 		dependencies = { "rafamadriz/friendly-snippets" },
 
@@ -23,8 +24,8 @@ return {
 			keymap = {
 				preset = "enter",
 				["<C-y>"] = { "select_and_accept" },
-				["<Tab>"] = { "select_next" },
-				["<S-Tab>"] = { "select_prev" },
+				-- ["<Tab>"] = { "select_next" },
+				-- ["<S-Tab>"] = { "select_prev" },
 			},
 
 			appearance = {

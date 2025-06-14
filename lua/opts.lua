@@ -41,13 +41,12 @@ vim.o.confirm = true
 vim.o.autowrite = true
 -- table indentation settings
 vim.o.smartindent = true
-vim.opt.autoindent = true
 
 vim.opt.list = false
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 return M

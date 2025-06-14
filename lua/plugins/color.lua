@@ -1,12 +1,7 @@
 return {
 	{
 		"Mofiqul/vscode.nvim",
-		config = function()
-			-- NOTE: you do not need to call setup if you don't want to.
-			require("vscode").setup({
-				-- optional configuration here
-			})
-		end,
+		event = "VeryLazy",
 	},
 	{
 		"sainnhe/everforest",
@@ -18,16 +13,19 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+		event = "VeryLazy",
 		config = function() end,
 	},
 	{
 		"rebelot/kanagawa.nvim",
 		name = "kanagawa",
+		event = "VeryLazy",
 		config = function() end,
 	},
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
+		event = "VeryLazy",
 		config = function() end,
 	},
 	{
@@ -47,6 +45,7 @@ return {
 	},
 	{
 		"metalelf0/black-metal-theme-neovim",
+		event = "VeryLazy",
 		config = function()
 			require("black-metal").setup({
 				-- optional configuration here

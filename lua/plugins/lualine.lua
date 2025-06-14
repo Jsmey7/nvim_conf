@@ -2,6 +2,7 @@ return {
 
 	{
 		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
 		name = "lualine",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		lazy = false,
