@@ -5,6 +5,7 @@ vim.g.have_nerd_font = true
 vim.opt.colorcolumn = "120"
 vim.opt.signcolumn = "yes"
 vim.opt.foldcolumn = "1"
+vim.opt.foldmethod = "manual"
 
 -- settings
 vim.o.number = true
