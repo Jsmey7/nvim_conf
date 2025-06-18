@@ -10,6 +10,14 @@ vim.keymap.set("n", "<C-w>o", ":SimpleZoomToggle<CR>", opts("zoom into window wh
 vim.keymap.set("n", "<C-c><C-c>", ":nohlsearch<CR>", opts("remove highlighting search"))
 vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR>", opts("remove highlighting search"))
 
+-- write with :W to
+vim.api.nvim_create_user_command(
+	"W", -- Command name
+	function() -- Command action
+		vim.cmd("write") -- Equivalent to :w
+	end,
+	{ force = true } -- Override if command already exists
+)
 --terminal
 
 vim.keymap.set(

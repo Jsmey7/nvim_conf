@@ -48,7 +48,7 @@ return {
 				filetypes = { "c", "cpp", "h", "hpp", "hxx", "cxx" },
 			})
 			lspconfig.rust_analyzer.setup({})
-			lspconfig.ts_ls.setup({}) -- Ensure tsserver is setup here
+			lspconfig.ts_ls.setup({})
 			lspconfig.zls.setup({})
 			-- ... other lspconfig setups
 		end,
