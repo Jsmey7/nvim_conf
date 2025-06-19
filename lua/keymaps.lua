@@ -42,7 +42,7 @@ vim.keymap.set("n", "<C-k>", ":q<CR>", opts("kill treminal or any buffer from no
 vim.keymap.set(
 	"n",
 	"<leader>te",
-	":tabnew<CR>:terminal<CR>:vnew<CR>:terminal<CR>:vertical resize -28<CR>acd<CR><C-l><C-\\><C-n><C-w>h<Esc>:TabRename terminal<CR>a",
+	":tabnew<CR>:terminal<CR>:vnew<CR>:terminal<CR>:vertical resize -28<CR>acd<CR><C-l><C-\\><C-n>:split<CR><C-w>h<Esc>:TabRename terminal<CR>a",
 	opts("open a terminal env buffer")
 )
 
@@ -127,11 +127,12 @@ vim.keymap.set("n", "<leader>dt", ":DapVirtualTextToggle<CR>", opts("toggle debu
 vim.keymap.set("n", "<leader>dcb", ":DapClearBreakpoints<CR>", opts("clear break points"))
 vim.keymap.set("n", "<leader>dui", ":lua require('dapui').toggle()<CR>", opts("toggle nvim dap ui"))
 vim.keymap.set("n", "<leader>dur", ":lua require('dapui').open({reset = true})<CR>", opts("restart dapui"))
-vim.keymap.set("n", "<F1>", ":DapContinue<CR>", opts("continue (debugging)"))
+
+vim.keymap.set("n", "<F1>", ":lua require('dapui').open()<CR>:DapContinue<CR>", opts("continue (debugging)"))
 vim.keymap.set("n", "<F2>", ":DapStepOver<CR>", opts("step over (debugging)"))
 vim.keymap.set("n", "<F3>", ":DapStepOut<CR>", opts("step out (debugging)"))
 vim.keymap.set("n", "<F4>", ":DapStepInto<CR>", opts("step into (debugging)"))
-vim.keymap.set("n", "<F13>", ":DapRestartFrame<CR>", opts("restart frame (debugging)"))
+vim.keymap.set("n", "<F12>", ":DapRestartFrame<CR>", opts("restart frame (debugging)"))
 
 -- helix like yank
 vim.keymap.set("x", "y", "ygv<Esc>", opts("copy selected text"))
@@ -144,8 +145,8 @@ vim.keymap.set("n", "<leader>mda", ":delmarks a-zA-Z <CR>", opts("delte all mark
 vim.api.nvim_set_keymap("n", "<leader>ta", ":$tabnew<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>tc", ":tabclose<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>to", ":tabonly<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>tn", ":tabn<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>tp", ":tabp<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "tn", ":tabn<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "tp", ":tabp<CR>", { noremap = true })
 
 --git
 vim.keymap.set("n", "<leader>ga", ":Git add .<CR>", opts("git add ."))

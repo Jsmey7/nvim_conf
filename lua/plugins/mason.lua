@@ -83,7 +83,40 @@ return {
 		dependencies = {
 			"rcarriga/nvim-dap-ui",
 			"theHamsta/nvim-dap-virtual-text",
+			"mason-org/mason.nvim",
 		},
+		config = function()
+			local dap = require("dap")
+			require("nvim-dap-virtual-text").setup()
+			dap.adapters.codelldb = {
+				type = "executable",
+				command = "/home/josh/.local/share/nvim/mason/packages/codelldb/codelldb", -- codelldb path (from mason)
+			}
+			dap.configurations.cpp = {
+				{
+					name = "Launch file",
+					type = "codelldb",
+					request = "launch",
+					program = function()
+						return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+					end,
+					cwd = "${workspaceFolder}",
+					stopOnEntry = false,
+				},
+			}
+			dap.configurations.rust = {
+				{
+					name = "Launch file",
+					type = "codelldb",
+					request = "launch",
+					program = function()
+						return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+					end,
+					cwd = "${workspaceFolder}",
+					stopOnEntry = false,
+				},
+			}
+		end,
 	},
 	{
 		"rcarriga/nvim-dap-ui",
@@ -96,12 +129,10 @@ return {
 			require("dapui").setup()
 		end,
 	},
-	{
-		"theHamsta/nvim-dap-virtual-text",
-		config = function()
-			require("nvim-dap-virtual-text").setup()
-		end,
-	},
+	-- { already calling setup from nvim_dap
+	-- 	"theHamsta/nvim-dap-virtual-text",
+	-- 	config = function() end,
+	-- },
 	{
 		"jay-babu/mason-nvim-dap.nvim",
 		cmd = {
