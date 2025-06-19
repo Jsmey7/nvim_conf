@@ -150,5 +150,6 @@ vim.api.nvim_set_keymap("n", "<leader>tp", ":tabp<CR>", { noremap = true })
 --git
 vim.keymap.set("n", "<leader>ga", ":Git add .<CR>", opts("git add ."))
 vim.keymap.set("n", "<leader>gc", ":Git commit<CR>", opts("git commit (opens commit window)"))
+vim.keymap.set("n", "<leader>gp", ":Git push<CR>", opts("git commit (opens commit window)"))
 
 return M
