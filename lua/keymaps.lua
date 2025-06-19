@@ -147,4 +147,8 @@ vim.api.nvim_set_keymap("n", "<leader>to", ":tabonly<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>tn", ":tabn<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>tp", ":tabp<CR>", { noremap = true })
 
+--git
+vim.keymap.set("n", "<leader>ga", ":Git add .<CR>", opts("git add ."))
+vim.keymap.set("n", "<leader>gc", ":Git commit -m", opts("git commit -m <message>"))
+
 return M
