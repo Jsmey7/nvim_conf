@@ -1,3 +1,0 @@
-1. added tab plugin and key binfindgs to switch between tabs
-2. added <leader>te to open terminal env
-3. added flash.nvim to search with treesitter (S) and regular search (s)
