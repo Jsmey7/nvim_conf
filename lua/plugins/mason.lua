@@ -87,6 +87,7 @@ return {
 	},
 	{
 		"rcarriga/nvim-dap-ui",
+		cmd = { "DapUIOpen", "DapUIClose", "DapUIToggle" },
 		dependencies = {
 			"nvim-dap",
 			"nvim-neotest/nvim-nio",
@@ -116,7 +117,7 @@ return {
 		},
 		config = function()
 			require("mason-nvim-dap").setup({
-				ensure_installed = { "python", "codelldb", "delve" },
+				ensure_installed = { "debugpy", "codelldb", "delve", "cpptools" },
 				automatic_setup = true,
 			})
 		end,

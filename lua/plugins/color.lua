@@ -48,6 +48,12 @@ return {
 		event = "VeryLazy",
 		config = function()
 			require("black-metal").setup({
+				theme = "thyrfing",
+				variant = "dark",
+				-- highlights = {
+				-- 	["@keyword"] = { fg = "#a644a1" },
+				-- 	["@variable"] = { fg = "#2f4d29", fmt = "bold" },
+				-- },
 				-- optional configuration here
 			})
 		end,

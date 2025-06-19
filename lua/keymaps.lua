@@ -23,7 +23,7 @@ vim.api.nvim_create_user_command(
 vim.keymap.set(
 	"n",
 	"<leader>tt",
-	":vnew<CR>:terminal<CR>:vertical resize -28<CR>a",
+	":vnew<CR>:terminal<CR>:vertical resize -16<CR>acd<CR><C-l>",
 	opts("open small treminal on the right side")
 )
 vim.keymap.set(
@@ -38,6 +38,13 @@ vim.keymap.set("t", "<C-x>", "<C-\\><C-n>", opts("switch to command mode from te
 
 vim.keymap.set("t", "<C-k>", "exit<CR>", opts("kill terminal (from terminal mode)"))
 vim.keymap.set("n", "<C-k>", ":q<CR>", opts("kill treminal or any buffer from normal mode"))
+
+vim.keymap.set(
+	"n",
+	"<leader>te",
+	":tabnew<CR>:terminal<CR>:vnew<CR>:terminal<CR>:vertical resize -28<CR>acd<CR><C-l><C-\\><C-n><C-w>h<Esc>:TabRename terminal<CR>a",
+	opts("open a terminal env buffer")
+)
 
 -- sorround
 vim.keymap.set("n", "miw", "viw", opts("sorround select inside word"))
@@ -132,5 +139,12 @@ vim.keymap.set("x", "y", "ygv<Esc>", opts("copy selected text"))
 -- marks
 vim.keymap.set("n", "<leader>md", ":delmarks a-z <CR>", opts("delte all local marks"))
 vim.keymap.set("n", "<leader>mda", ":delmarks a-zA-Z <CR>", opts("delte all marks"))
+
+-- tabs
+vim.api.nvim_set_keymap("n", "<leader>ta", ":$tabnew<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>tc", ":tabclose<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>to", ":tabonly<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>tn", ":tabn<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>tp", ":tabp<CR>", { noremap = true })
 
 return M

@@ -11,6 +11,7 @@ return {
 				PERF = { icon = " ", color = "#7C3AED", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
 				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 				TEST = { icon = "⏲ ", color = "#FF00FF", alt = { "TESTING", "PASSED", "FAILED" } },
+				DANGER = { icon = "", color = "#bf5d17" },
 			},
 			colors = {
 				error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
