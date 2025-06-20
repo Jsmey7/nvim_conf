@@ -76,6 +76,12 @@ vim.keymap.set("n", "mar", "va{", opts("sorround select inside curly brackets {}
 
 vim.keymap.set("n", "dir", "di{", opts("sorround select inside brackets {}"))
 vim.keymap.set("n", "dar", "da{", opts("sorround select inside curly brackets {}"))
+
+vim.keymap.set("n", "mit", "vi<", opts("sorround select inside brackets {}"))
+vim.keymap.set("n", "mat", "va<", opts("sorround select inside curly brackets {}"))
+
+vim.keymap.set("n", "dit", "di<", opts("sorround select inside <>"))
+vim.keymap.set("n", "dat", "da<", opts("sorround select inside curly brackets <>"))
 -- comment
 
 local api = require("Comment.api")
