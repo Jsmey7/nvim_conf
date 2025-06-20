@@ -60,7 +60,7 @@ return {
 							["ac"] = "@class.outer",
 							["a="] = "@assignment.outer",
 							["i="] = "@assignment.inner",
-							["l="] = "@assignment.lhs",
+							-- ["l="] = "@assignment.lhs",
 							["r="] = "@assignment.rhs",
 							-- You can optionally set descriptions to the mappings (used in the desc parameter of
 							-- nvim_buf_set_keymap) which plugins like which-key display
