@@ -46,10 +46,36 @@ vim.keymap.set(
 	opts("open a terminal env buffer")
 )
 
--- sorround
+-- sorround select
 vim.keymap.set("n", "miw", "viw", opts("sorround select inside word"))
 vim.keymap.set("n", "maw", "vaw", opts("sorround select around word"))
---
+
+vim.keymap.set("n", "diw", "diw", opts("sorround delete inside word"))
+vim.keymap.set("n", "daw", "daw", opts("sorround delete around word"))
+
+vim.keymap.set("n", "mip", "vip", opts("sorround select inside peragraph"))
+vim.keymap.set("n", "map", "vap", opts("sorround select around peragraph"))
+
+vim.keymap.set("n", "dip", "dip", opts("sorround delete inside peragraph"))
+vim.keymap.set("n", "dap", "dap", opts("sorround delete around peragraph"))
+
+vim.keymap.set("n", "mib", "vi(", opts("sorround select inside brackets ()"))
+vim.keymap.set("n", "mab", "va(", opts("sorround select around brackets ()"))
+
+vim.keymap.set("n", "dib", "di(", opts("sorround delete inside brackets ()"))
+vim.keymap.set("n", "dab", "da(", opts("sorround delete around brackets ()"))
+
+vim.keymap.set("n", "miq", 'vi"', opts('sorround select inside quotes ""'))
+vim.keymap.set("n", "maq", 'va"', opts('sorround select around quotes ""'))
+
+vim.keymap.set("n", "diq", 'di"', opts('sorround delete inside quotes ""'))
+vim.keymap.set("n", "daq", 'da"', opts('sorround inside around quotes ""'))
+
+vim.keymap.set("n", "mir", "vi{", opts("sorround select inside brackets {}"))
+vim.keymap.set("n", "mar", "va{", opts("sorround select inside curly brackets {}"))
+
+vim.keymap.set("n", "dir", "di{", opts("sorround select inside brackets {}"))
+vim.keymap.set("n", "dar", "da{", opts("sorround select inside curly brackets {}"))
 -- comment
 
 local api = require("Comment.api")
