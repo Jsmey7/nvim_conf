@@ -42,7 +42,7 @@ vim.keymap.set("n", "<C-k>", ":q<CR>", opts("kill treminal or any buffer from no
 vim.keymap.set(
 	"n",
 	"<leader>te",
-	":tabnew<CR>:terminal<CR>:vnew<CR>:terminal<CR>:vertical resize -28<CR>acd<CR><C-l><C-\\><C-n>:split<CR><C-w>h<Esc>:TabRename terminal<CR>a",
+	":tabnew<CR>:terminal<CR>:vnew<CR>:terminal<CR>:vertical resize -34<CR>acd<CR><C-l><C-\\><C-n><C-w>h<Esc>:TabRename terminal<CR>a",
 	opts("open a terminal env buffer")
 )
 
