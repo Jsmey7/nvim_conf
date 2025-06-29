@@ -23,7 +23,7 @@ vim.api.nvim_create_user_command(
 vim.keymap.set(
 	"n",
 	"<leader>tt",
-	":vnew<CR>:terminal<CR>:vertical resize -16<CR>acd<CR><C-l>",
+	":vnew<CR>:terminal<CR>:vertical resize -25<CR>a",
 	opts("open small treminal on the right side")
 )
 vim.keymap.set(

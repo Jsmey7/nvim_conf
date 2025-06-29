@@ -36,7 +36,7 @@ require("keymaps")
 require("telescope_conf")
 require("harpoon_conf")
 
-vim.cmd.colorscheme("habamax")
+vim.cmd.colorscheme("gruvbox-material")
 
 vim.diagnostic.config({
 	update_in_insert = true,
