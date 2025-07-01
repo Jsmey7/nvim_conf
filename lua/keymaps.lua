@@ -153,6 +153,10 @@ vim.keymap.set("n", "<leader>th", function()
 	require("telescope.builtin").colorscheme()
 end, opts("Switch color scheme"))
 
+-- delete
+vim.keymap.set("n", "dgl", "d$", opts("delete to the end of line"))
+vim.keymap.set("n", "dge", "d^", opts("delete to the end of line"))
+
 -- debugging
 vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", opts("toggle breakpoint"))
 vim.keymap.set("n", "<leader>dt", ":DapVirtualTextToggle<CR>", opts("toggle debugging veirtual text"))
