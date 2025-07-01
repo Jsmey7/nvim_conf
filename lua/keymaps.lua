@@ -155,7 +155,7 @@ end, opts("Switch color scheme"))
 
 -- delete
 vim.keymap.set("n", "dgl", "d$", opts("delete to the end of line"))
-vim.keymap.set("n", "dge", "d^", opts("delete to the end of line"))
+vim.keymap.set("n", "dgh", "d^", opts("delete to the end of line"))
 
 -- debugging
 vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", opts("toggle breakpoint"))
