@@ -11,20 +11,8 @@ return {
 		end,
 	},
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		event = "VeryLazy",
-		config = function() end,
-	},
-	{
 		"rebelot/kanagawa.nvim",
 		name = "kanagawa",
-		event = "VeryLazy",
-		config = function() end,
-	},
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
 		event = "VeryLazy",
 		config = function() end,
 	},
@@ -57,5 +45,9 @@ return {
 				-- optional configuration here
 			})
 		end,
+	},
+	{
+		"vague2k/vague.nvim",
+		event = "VeryLazy",
 	},
 }

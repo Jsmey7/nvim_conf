@@ -4,6 +4,9 @@ local opts = function(desc)
 	return { noremap = true, silent = true, desc = desc }
 end
 
+vim.api.nvim_set_keymap("n", "gdc", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts("goto declaration"))
+vim.api.nvim_set_keymap("n", "gdf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts("goto defenition"))
+
 vim.api.nvim_set_hl(0, "WinSeparator", { link = "Normal", bold = true })
 vim.keymap.set("n", "<C-w>o", ":SimpleZoomToggle<CR>", opts("zoom into window while preserving the layout"))
 
