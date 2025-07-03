@@ -51,4 +51,8 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.showtabline = 2
+
+vim.opt.updatetime = 300
+vim.opt.swapfile = false
+
 return M
