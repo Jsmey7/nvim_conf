@@ -36,7 +36,7 @@ require("keymaps")
 require("telescope_conf")
 require("harpoon_conf")
 
-vim.cmd.colorscheme("gruvbox-material")
+vim.cmd.colorscheme("zenbones")
 
 vim.diagnostic.config({
 	update_in_insert = true,
