@@ -4,12 +4,17 @@ local opts = function(desc)
 	return { noremap = true, silent = true, desc = desc }
 end
 
-vim.api.nvim_set_keymap("n", "gdc", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts("goto declaration"))
-vim.api.nvim_set_keymap("n", "gdf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts("goto defenition"))
+-- lsp navigation
+vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts("goto declaration"))
+vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>", opts("goto defenition"))
+vim.api.nvim_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts("Go to Implementation"))
+vim.api.nvim_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts("Go to References"))
+vim.api.nvim_set_keymap("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts("Go to Type Definition"))
+vim.api.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts("Hover Documentation"))
+vim.api.nvim_set_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts("Rename Symbol"))
+vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts("Code Action"))
 
-vim.api.nvim_set_hl(0, "WinSeparator", { link = "Normal", bold = true })
-vim.keymap.set("n", "<C-w>o", ":SimpleZoomToggle<CR>", opts("zoom into window while preserving the layout"))
-
+--
 vim.keymap.set("n", "<C-c><C-c>", ":nohlsearch<CR>", opts("remove highlighting search"))
 vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR>", opts("remove highlighting search"))
 
