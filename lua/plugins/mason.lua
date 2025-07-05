@@ -16,6 +16,7 @@ return {
 		config = function()
 			require("mason-null-ls").setup({
 				ensure_installed = {
+					"latexindent",
 					"stylua",
 					"jq",
 					"black",
