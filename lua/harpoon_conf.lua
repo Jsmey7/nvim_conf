@@ -25,14 +25,6 @@ vim.keymap.set("n", "<C-p>", function()
 	harpoon:list():select(5)
 end, { desc = "open harpoon window 5" })
 
-vim.keymap.set("n", "<C-[>", function()
-	harpoon:list():select(6)
-end, { desc = "open harpoon window 6" })
-
-vim.keymap.set("n", "<C-]>", function()
-	harpoon:list():select(6)
-end, { desc = "open harpoon window 7" })
-
 vim.keymap.set("n", "<leader>hp", function()
 	harpoon:list():prev()
 end, { desc = "Prev harpoon window" })
@@ -43,4 +35,5 @@ end, { desc = "Next harpoon window" })
 vim.keymap.set("n", "<C-h>", function()
 	harpoon.ui:toggle_quick_menu(harpoon:list())
 end, { desc = "toggle harpoon menue" })
+
 return M
