@@ -28,31 +28,31 @@ vim.api.nvim_create_user_command(
 )
 --terminal
 
-vim.keymap.set(
-	"n",
-	"<leader>tt",
-	":vnew<CR>:terminal<CR>:vertical resize -25<CR>a",
-	opts("open small treminal on the right side")
-)
-vim.keymap.set(
-	"n",
-	"<leader>tl",
-	":vnew<CR>:terminal<CR>:vertical resize -5<CR>a",
-	opts("open large treminal on the right side")
-)
-
-vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", opts("window mode (switch between windows with ljkh)"))
-vim.keymap.set("t", "<C-x>", "<C-\\><C-n>", opts("switch to command mode from terminal mode"))
-
-vim.keymap.set("t", "<C-k>", "exit<CR>", opts("kill terminal (from terminal mode)"))
-vim.keymap.set("n", "<C-k>", ":q<CR>", opts("kill treminal or any buffer from normal mode"))
-
-vim.keymap.set(
-	"n",
-	"<leader>te",
-	":tabnew<CR>:terminal<CR>:vnew<CR>:terminal<CR>:vertical resize -34<CR>acd<CR><C-l><C-\\><C-n><C-w>h<Esc>:TabRename terminal<CR>a",
-	opts("open a terminal env buffer")
-)
+-- vim.keymap.set(
+-- 	"n",
+-- 	"<leader>tt",
+-- 	":vnew<CR>:terminal<CR>:vertical resize -25<CR>a",
+-- 	opts("open small treminal on the right side")
+-- )
+-- vim.keymap.set(
+-- 	"n",
+-- 	"<leader>tl",
+-- 	":vnew<CR>:terminal<CR>:vertical resize -5<CR>a",
+-- 	opts("open large treminal on the right side")
+-- )
+--
+-- vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", opts("window mode (switch between windows with ljkh)"))
+-- vim.keymap.set("t", "<C-x>", "<C-\\><C-n>", opts("switch to command mode from terminal mode"))
+--
+-- vim.keymap.set("t", "<C-k>", "exit<CR>", opts("kill terminal (from terminal mode)"))
+-- vim.keymap.set("n", "<C-k>", ":q<CR>", opts("kill treminal or any buffer from normal mode"))
+--
+-- vim.keymap.set(
+-- 	"n",
+-- 	"<leader>te",
+-- 	":tabnew<CR>:terminal<CR>:vnew<CR>:terminal<CR>:vertical resize -34<CR>acd<CR><C-l><C-\\><C-n><C-w>h<Esc>:TabRename terminal<CR>a",
+-- 	opts("open a terminal env buffer")
+-- )
 
 -- sorround select
 vim.keymap.set("n", "miw", "viw", opts("sorround select inside word"))
@@ -143,10 +143,10 @@ vim.keymap.set("v", "ge", "G", opts("goto end of file"))
 vim.keymap.set("v", "gy", "0", opts("goto start of line before indentation"))
 
 -- window managment
-vim.keymap.set("n", "<C-w>h", "<cmd>wincmd h<cr>", opts("goto left window"))
-vim.keymap.set("n", "<C-w>j", "<cmd>wincmd j<cr>", opts("goto down window"))
-vim.keymap.set("n", "<C-w>k", "<cmd>wincmd k<cr>", opts("goto up window"))
-vim.keymap.set("n", "<C-w>l", "<cmd>wincmd l<cr>", opts("goto right window"))
+-- vim.keymap.set("n", "<C-w>h", "<cmd>wincmd h<cr>", opts("goto left window"))
+-- vim.keymap.set("n", "<C-w>j", "<cmd>wincmd j<cr>", opts("goto down window"))
+-- vim.keymap.set("n", "<C-w>k", "<cmd>wincmd k<cr>", opts("goto up window"))
+-- vim.keymap.set("n", "<C-w>l", "<cmd>wincmd l<cr>", opts("goto right window"))
 vim.keymap.set("n", "<C-w>v", "<cmd>vsplit<cr>", opts("vertical window split"))
 vim.keymap.set("n", "<C-w>s", "<cmd>split<cr>", opts("horizontal window split"))
 

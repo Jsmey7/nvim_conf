@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>hn", function()
 	harpoon:list():next()
 end, { desc = "Next harpoon window" })
 
-vim.keymap.set("n", "<C-h>", function()
+vim.keymap.set("n", "<leader>hui", function()
 	harpoon.ui:toggle_quick_menu(harpoon:list())
 end, { desc = "toggle harpoon menue" })
 
