@@ -14,6 +14,10 @@ vim.api.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts("Hove
 vim.api.nvim_set_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts("Rename Symbol"))
 vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts("Code Action"))
 
+vim.api.nvim_set_keymap("n", "<leader>ds", "<cmd>lua vim.lsp.buf.document_symbol()<CR>", opts("Document Symbols"))
+vim.api.nvim_set_keymap("n", "<leader>ws", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>", opts("Workspace Symbols"))
+vim.api.nvim_set_keymap("n", "<leader>oi", "<cmd>lua vim.lsp.buf.incoming_calls()<CR>", opts("Incoming Calls"))
+vim.api.nvim_set_keymap("n", "<leader>oo", "<cmd>lua vim.lsp.buf.outgoing_calls()<CR>", opts("Outgoing Calls"))
 --
 vim.keymap.set("n", "<C-c><C-c>", ":nohlsearch<CR>", opts("remove highlighting search"))
 vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR>", opts("remove highlighting search"))
@@ -23,6 +27,15 @@ vim.api.nvim_create_user_command(
 	"W", -- Command name
 	function() -- Command action
 		vim.cmd("write") -- Equivalent to :w
+	end,
+	{ force = true } -- Override if command already exists
+)
+
+-- write with :Q to quit
+vim.api.nvim_create_user_command(
+	"Q", -- Command name
+	function() -- Command action
+		vim.cmd("quit") -- Equivalent to :w
 	end,
 	{ force = true } -- Override if command already exists
 )

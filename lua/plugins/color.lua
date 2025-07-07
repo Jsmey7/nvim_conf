@@ -5,7 +5,7 @@ return {
 	},
 	{
 		"sainnhe/everforest",
-		lazy = false,
+		event = "VeryLazy",
 		config = function()
 			vim.g.everforest_enable_italic = true
 		end,
@@ -18,8 +18,7 @@ return {
 	},
 	{
 		"sainnhe/gruvbox-material",
-		lazy = false,
-		priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			vim.g.gruvbox_material_enable_italic = true
 			vim.g.gruvbox_material_background = "soft"
